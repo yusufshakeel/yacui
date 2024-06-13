@@ -12,6 +12,7 @@
     "build": "tsup",
     "all": "rm -rf dist && npm run precommit && npm run build",
     "test": "jest -c jest.config.json",
+    "test:watch": "jest --watch -c jest.config.json",
     "precommit": "npm run lint && npm run test",
     "lint": "npm run lint:src && npm run lint:test",
     "lint:src": "npx eslint -c .eslintrc.json src",
