@@ -9,7 +9,7 @@ export type titleBarProps = {
 };
 
 export default class TitleBar {
-  public getTitleBar(props: titleBarProps) {
+  public static getTitleBar(props: titleBarProps): string {
     const terminalWidth = getTerminalWidth();
     const leftBorder = `${dv}${sp}`;
     const rightBorder = `${sp}${dv}`;
