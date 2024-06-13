@@ -15,17 +15,17 @@ function getHorizontalBorder(): string {
 }
 
 export default class Window {
-  public getTopBorder(): string {
+  public static getTopBorder(): string {
     const horizontalBorder = getHorizontalBorder();
     return `${dr}${horizontalBorder}${dl}`;
   }
 
-  public getHorizontalDivider(): string {
+  public static getHorizontalDivider(): string {
     const horizontalBorder = getHorizontalBorder();
     return `${vr}${horizontalBorder}${vl}`;
   }
 
-  public getBottomBorder(): string {
+  public static getBottomBorder(): string {
     const horizontalBorder = getHorizontalBorder();
     return `${ur}${horizontalBorder}${ul}`;  
   }
