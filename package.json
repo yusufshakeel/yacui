@@ -1,5 +1,5 @@
 {
-  "name": "consoleui",
+  "name": "yacui",
   "version": "0.1.0",
   "description": "This is a Node.js project to create user interface for the console.",
   "main": "./dist/index.js",
@@ -34,12 +34,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yusufshakeel/consoleui.git"
+    "url": "git+https://github.com/yusufshakeel/yacui.git"
   },
   "bugs": {
-    "url": "https://github.com/yusufshakeel/consoleui/issues"
+    "url": "https://github.com/yusufshakeel/yacui/issues"
   },
-  "homepage": "https://github.com/yusufshakeel/consoleui#readme",
+  "homepage": "https://github.com/yusufshakeel/yacui#readme",
   "engines": {
     "node": ">12.0.0"
   },
