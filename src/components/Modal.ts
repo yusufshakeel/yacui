@@ -12,7 +12,7 @@ import {
 } from '../constants/characters';
 import { getTextInMultipleLines } from '../util';
 
-export default class Modal {
+export class Modal {
   private title = '';
   private bodyLines: string[] = [];
   private yesButton = '';
@@ -88,3 +88,5 @@ export default class Modal {
     return `${topBorder}${titleRow}${body}${emptyRow}${footer}${bottomBorder}${horizontalShadow}`;
   }
 }
+
+export default Modal;

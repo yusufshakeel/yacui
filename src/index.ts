@@ -1,3 +1,2 @@
-import Modal from './components/Modal';
-import * as CHARACTERS from './constants/characters';
-export { Modal, CHARACTERS };
+export * from './components/Modal';
+export * as CHARACTERS from './constants/characters';
