@@ -25,11 +25,7 @@ export default class Row {
 
   public static getEmptyRow(): string {
     const terminalWidth = getTerminalWidth();
-    const leftBorder = `${dv}${sp}`;
-    const rightBorder = `${sp}${dv}`;
-    const leftBorderLength = leftBorder.length;
-    const rightBorderLength = rightBorder.length;
-    const spacePadding = sp.repeat(terminalWidth - leftBorderLength - rightBorderLength);
-    return `${leftBorder}${spacePadding}${rightBorder}`;
+    const spacePadding = sp.repeat(terminalWidth - 4);
+    return `${dv}${sp}${spacePadding}${sp}${dv}`;
   }
 }
