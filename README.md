@@ -32,6 +32,7 @@ const modal = new Modal()
   .withYesButton()
   .withNoButton()
   .withOkayButton()
+  .withCloseButton()
   .build();
 ```
 
