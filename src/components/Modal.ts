@@ -96,7 +96,7 @@ export class Modal {
   }
 
   /**
-   * @description Builds the modal and returns the string representation which can be printed on console.
+   * @description Builds the modal and returns the string representation.
    * @memberof Modal
    * @returns {string}
    */
