@@ -11,14 +11,7 @@ export type titleBarProps = {
 export default class TitleBar {
   public static getTitleBar(props: titleBarProps): string {
     const terminalWidth = getTerminalWidth();
-    const leftBorder = `${dv}${sp}`;
-    const rightBorder = `${sp}${dv}`;
-    const titleLength = props.title.length;
-    const leftBorderLength = leftBorder.length;
-    const rightBorderLength = rightBorder.length;
-    const rightSpacePadding = 
-      sp.repeat(terminalWidth - titleLength - leftBorderLength - rightBorderLength);
-    const content = `${props.title}${rightSpacePadding}`;
-    return `${leftBorder}${content}${rightBorder}`;
+    const title = props.title.substring(0, 30).padEnd(terminalWidth - 4, sp);
+    return `${dv}${sp}${title}${sp}${dv}`;
   }
 }
