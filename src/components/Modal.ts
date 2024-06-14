@@ -18,7 +18,7 @@ export default class Modal {
   private yesButton = '';
   private okayButton = '';
   private noButton = '';
-  private closeButton = '[C]lose';
+  private closeButton = '';
   private leftBorder = `${lv}${sp}`;
   private rightBorder = `${sp}${lv}`;
   private shadowLength = sh.length;
@@ -46,6 +46,11 @@ export default class Modal {
 
   public withOkayButton(): Modal {
     this.okayButton = '[O]kay ';
+    return this;
+  }
+
+  public withCloseButton(): Modal {
+    this.closeButton = '[C]lose ';
     return this;
   }
 

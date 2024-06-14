@@ -8,6 +8,7 @@ describe('Modal', () => {
       .withYesButton()
       .withNoButton()
       .withOkayButton()
+      .withCloseButton()
       .build();
     expect(modal)
       .toStrictEqual(
