@@ -4,14 +4,14 @@ import {
 } from '../constants/characters';
 import { getTerminalWidth } from '../util';
 
-export type rowProps = {
+type rowParamsType = {
   content: string
 };
 
 export default class Row {
-  public static getRow(props: rowProps): string {
+  public static getRow(params: rowParamsType): string {
     const terminalWidth = getTerminalWidth();
-    const { content } = props;
+    const { content } = params;
     const rowContent = content.padEnd(terminalWidth - 4, sp);
     return `${dv}${sp}${rowContent}${sp}${dv}`;
   }

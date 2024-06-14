@@ -4,14 +4,14 @@ import {
 } from '../constants/characters';
 import { getTerminalWidth } from '../util';
 
-export type footerProps = {
+type footerParamsType = {
     items: string[]
 };
 
 export default class Footer {
-  public static getFooter(props: footerProps): string {
+  public static getFooter(params: footerParamsType): string {
     const terminalWidth = getTerminalWidth();
-    const footerItems = props.items.join(' ');
+    const footerItems = params.items.join(' ');
     const footer = footerItems.padEnd(terminalWidth - 4, sp);
     return `${dv}${sp}${footer}${sp}${dv}`;
   }
