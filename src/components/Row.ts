@@ -11,16 +11,9 @@ export type rowProps = {
 export default class Row {
   public static getRow(props: rowProps): string {
     const terminalWidth = getTerminalWidth();
-    const leftBorder = `${dv}${sp}`;
-    const rightBorder = `${sp}${dv}`;
     const { content } = props;
-    const contentLength = content.length;
-    const leftBorderLength = leftBorder.length;
-    const rightBorderLength = rightBorder.length;
-    const rightSpacePadding = 
-      sp.repeat(terminalWidth - contentLength - leftBorderLength - rightBorderLength);
-    const rowContent = `${content}${rightSpacePadding}`;
-    return `${leftBorder}${rowContent}${rightBorder}`;
+    const rowContent = content.padEnd(terminalWidth - 4, sp);
+    return `${dv}${sp}${rowContent}${sp}${dv}`;
   }
 
   public static getEmptyRow(): string {
