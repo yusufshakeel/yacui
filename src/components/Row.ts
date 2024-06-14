@@ -8,7 +8,7 @@ type rowParamsType = {
   content: string
 };
 
-export default class Row {
+export class Row {
   public static getRow(params: rowParamsType): string {
     const terminalWidth = getTerminalWidth();
     const { content } = params;

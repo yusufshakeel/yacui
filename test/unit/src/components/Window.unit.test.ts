@@ -1,4 +1,4 @@
-import Window from '../../../../src/components/Window';
+import { Window } from '../../../../src/components/Window';
 import * as util from '../../../../src/util';
 
 describe('Window', () => {

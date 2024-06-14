@@ -14,7 +14,7 @@ function getHorizontalBorder(): string {
   return dh.repeat(terminalWidth - 2);
 }
 
-export default class Window {
+export class Window {
   public static getTopBorder(): string {
     const horizontalBorder = getHorizontalBorder();
     return `${dr}${horizontalBorder}${dl}`;

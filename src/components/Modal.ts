@@ -88,5 +88,3 @@ export class Modal {
     return `${topBorder}${titleRow}${body}${emptyRow}${footer}${bottomBorder}${horizontalShadow}`;
   }
 }
-
-export default Modal;

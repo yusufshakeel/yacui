@@ -8,7 +8,7 @@ type footerParamsType = {
     items: string[]
 };
 
-export default class Footer {
+export class Footer {
   public static getFooter(params: footerParamsType): string {
     const terminalWidth = getTerminalWidth();
     const footerItems = params.items.join(' ');

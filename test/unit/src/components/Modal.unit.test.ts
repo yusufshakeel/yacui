@@ -1,4 +1,4 @@
-import Modal from '../../../../src/components/Modal';
+import { Modal } from '../../../../src/components/Modal';
 
 describe('Modal', () => {
   it('should be able to render modal', () => {

@@ -1,4 +1,4 @@
-import Row from '../../../../src/components/Row';
+import { Row } from '../../../../src/components/Row';
 import * as util from '../../../../src/util';
 
 describe('Row', () => {

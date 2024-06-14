@@ -1,4 +1,4 @@
-import TitleBar from '../../../../src/components/TitleBar';
+import { TitleBar } from '../../../../src/components/TitleBar';
 import * as util from '../../../../src/util';
 
 describe('TitleBar', () => {
