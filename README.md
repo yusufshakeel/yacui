@@ -21,6 +21,34 @@ import { Modal } from 'yacui';
 const { Modal } = require('yacui');
 ```
 
+## Window
+
+```js
+import { Window } from 'yacui';
+
+const window = new Window()
+  .withTitle('My title')
+  .withFooter({ items: ['[F10] Quit'] })
+  .withWidth(50)
+  .withHeight(10)
+  .build();
+```
+
+When we print the modal we will get the following.
+
+```txt
+╔════════════════════════════════════════════════╗
+║ My title                                       ║
+╠════════════════════════════════════════════════╣
+║                                                ║
+║                                                ║
+║                                                ║
+║                                                ║
+╠════════════════════════════════════════════════╣
+║ [F10] Quit                                     ║
+╚════════════════════════════════════════════════╝
+```
+
 ## Modal
 
 ```js
@@ -39,17 +67,17 @@ const modal = new Modal()
 When we print the modal we will get the following.
 
 ```txt
-   ┌─────────────────────────────────┐
-   │ My title                        │░
-   ├─────────────────────────────────┤░
-   │ This is a sample body for       │░
-   │ testing and it is occupying     │░
-   │ multiple lines.                 │░
-   │                                 │░
-   ├─────────────────────────────────┤░
-   │ [Y]es [N]o [O]kay [C]lose       │░
-   └─────────────────────────────────┘░
-    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+┌─────────────────────────────────┐
+│ My title                        │░
+├─────────────────────────────────┤░
+│ This is a sample body for       │░
+│ testing and it is occupying     │░
+│ multiple lines.                 │░
+│                                 │░
+├─────────────────────────────────┤░
+│ [Y]es [N]o [O]kay [C]lose       │░
+└─────────────────────────────────┘░
+ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ```
 
 ## License
