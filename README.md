@@ -40,16 +40,16 @@ When we print the modal we will get the following.
 
 ```txt
    ┌─────────────────────────────────┐
-   │ My title                        │▒
-   ├─────────────────────────────────┤▒
-   │ This is a sample body for       │▒
-   │ testing and it is occupying     │▒
-   │ multiple lines.                 │▒
-   │                                 │▒
-   ├─────────────────────────────────┤▒
-   │ [Y]es [N]o [O]kay [C]lose       │▒
-   └─────────────────────────────────┘▒
-    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+   │ My title                        │░
+   ├─────────────────────────────────┤░
+   │ This is a sample body for       │░
+   │ testing and it is occupying     │░
+   │ multiple lines.                 │░
+   │                                 │░
+   ├─────────────────────────────────┤░
+   │ [Y]es [N]o [O]kay [C]lose       │░
+   └─────────────────────────────────┘░
+    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ```
 
 ## License
