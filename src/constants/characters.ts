@@ -25,5 +25,5 @@ export const BOX_DRAWINGS_HEAVY_VERTICAL = '┃';
 export const BOX_DRAWINGS_HEAVY_VERTICAL_AND_HORIZONTAL = '╋';
 export const BOX_DRAWINGS_HEAVY_VERTICAL_AND_LEFT = '┫';
 export const BOX_DRAWINGS_HEAVY_VERTICAL_AND_RIGHT = '┣';
-export const SHADOW = '▒';
+export const SHADOW = '░';
 export const SPACE = ' ';
