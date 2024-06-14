@@ -11,15 +11,8 @@ export type footerProps = {
 export default class Footer {
   public static getFooter(props: footerProps): string {
     const terminalWidth = getTerminalWidth();
-    const leftBorder = `${dv}${sp}`;
-    const rightBorder = `${sp}${dv}`;
     const footerItems = props.items.join(' ');
-    const footerLength = footerItems.length;
-    const leftBorderLength = leftBorder.length;
-    const rightBorderLength = rightBorder.length;
-    const rightSpacePadding = 
-      sp.repeat(terminalWidth - footerLength - leftBorderLength - rightBorderLength);
-    const content = `${footerItems}${rightSpacePadding}`;
-    return `${leftBorder}${content}${rightBorder}`;
+    const footer = footerItems.padEnd(terminalWidth - 4, sp);
+    return `${dv}${sp}${footer}${sp}${dv}`;
   }
 }
