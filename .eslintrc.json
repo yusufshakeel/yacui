@@ -41,7 +41,14 @@
       "global"
     ],
     "no-console": [
-      "error"
+      "error",
+      {
+        "allow": [
+          "error",
+          "log",
+          "clear"
+        ]
+      }
     ],
     "new-cap": [
       "off"
