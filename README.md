@@ -1,8 +1,8 @@
-# yacui
+# yacui (yet another console ui)
 This is a Node.js project to create user interface for the console.
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yusufshakeel/yacui)
-[![npm version](https://img.shields.io/badge/npm-0.1.0-blue.svg)](https://www.npmjs.com/package/yacui)
+[![npm version](https://img.shields.io/badge/npm-0.1.1-blue.svg)](https://www.npmjs.com/package/yacui)
 [![npm Downloads](https://img.shields.io/npm/dm/yacui.svg)](https://www.npmjs.com/package/yacui)
 
 ## Getting started
