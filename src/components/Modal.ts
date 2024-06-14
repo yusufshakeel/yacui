@@ -12,6 +12,10 @@ import {
 } from '../constants/characters';
 import { getTextInMultipleLines } from '../util';
 
+/**
+ * @class Modal
+ * @description This class is used to create Modal.
+ */
 export class Modal {
   private title = '';
   private bodyLines: string[] = [];
@@ -28,37 +32,74 @@ export class Modal {
   private modalWidth = 
     this.leftBorderLength + this.modalInnerWidth + this.rightBorderLength + this.shadowLength;
 
+  /**
+   * @description Set the title of the modal.
+   * @param {string} title
+   * @memberof Modal
+   * @returns {Modal}
+   */
   public withTitle(title: string): Modal {
     this.title = title.substring(0, this.modalInnerWidth - 1).padEnd(this.modalInnerWidth + 1, sp);
     return this;
   }
 
+  /**
+   * @description Set the body text of the modal.
+   * @param {string} body
+   * @memberof Modal
+   * @returns {Modal}
+   */
   public withBody(body: string): Modal {
     this.bodyLines = getTextInMultipleLines(body, this.modalInnerWidth)
       .map(line => line.padEnd(this.modalInnerWidth + 1, sp));
     return this;
   }
 
+  /**
+   * @description Add the [Y]es button to the footer section of the modal.
+   * @memberof Modal
+   * @returns {Modal}
+   */
   public withYesButton(): Modal {
     this.yesButton = '[Y]es ';
     return this;
   }
 
+  /**
+   * @description Add the [O]kay button to the footer section of the modal.
+   * @memberof Modal
+   * @returns {Modal}
+   */
   public withOkayButton(): Modal {
     this.okayButton = '[O]kay ';
     return this;
   }
 
+  /**
+   * @description Add the [C]lose button to the footer section of the modal.
+   * @memberof Modal
+   * @returns {Modal}
+   */
   public withCloseButton(): Modal {
     this.closeButton = '[C]lose ';
     return this;
   }
 
+  /**
+   * @description Add the [N]o button to the footer section of the modal.
+   * @memberof Modal
+   * @returns {Modal}
+   */
   public withNoButton(): Modal {
     this.noButton = '[N]o ';
     return this;
   }
 
+  /**
+   * @description Builds the modal and returns the string representation which can be printed on console.
+   * @memberof Modal
+   * @returns {string}
+   */
   public build(): string {
     const horizontalDivider = lh.repeat(this.modalWidth - 2);
     const horizontalShadow = `${sp}${sh.repeat(this.modalWidth)}`;

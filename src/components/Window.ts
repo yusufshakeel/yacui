@@ -14,17 +14,36 @@ function getHorizontalBorder(): string {
   return dh.repeat(terminalWidth - 2);
 }
 
+/**
+ * @class Window
+ * @description This class is used to create different elements of the window.
+ */
 export class Window {
+  /**
+   * @description This will return the top border.
+   * @memberof Window
+   * @returns {string}
+   */
   public static getTopBorder(): string {
     const horizontalBorder = getHorizontalBorder();
     return `${dr}${horizontalBorder}${dl}`;
   }
 
+  /**
+   * @description This will return the horizontal divider.
+   * @memberof Window
+   * @returns {string}
+   */
   public static getHorizontalDivider(): string {
     const horizontalBorder = getHorizontalBorder();
     return `${vr}${horizontalBorder}${vl}`;
   }
 
+  /**
+   * @description This will return the bottom border.
+   * @memberof Window
+   * @returns {string}
+   */
   public static getBottomBorder(): string {
     const horizontalBorder = getHorizontalBorder();
     return `${ur}${horizontalBorder}${ul}`;  

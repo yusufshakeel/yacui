@@ -8,7 +8,17 @@ type rowParamsType = {
   content: string
 };
 
+/**
+ * @class Row
+ * @description This class is used to create rows.
+ */
 export class Row {
+  /**
+   * @description This will return a row with the passed content.
+   * @param {rowParamsType} params
+   * @memberof Row
+   * @returns {string}
+   */
   public static getRow(params: rowParamsType): string {
     const terminalWidth = getTerminalWidth();
     const { content } = params;
@@ -16,6 +26,11 @@ export class Row {
     return `${dv}${sp}${rowContent}${sp}${dv}`;
   }
 
+  /**
+   * @description This will return an empty row.
+   * @memberof Row
+   * @returns {string}
+   */
   public static getEmptyRow(): string {
     const terminalWidth = getTerminalWidth();
     const spacePadding = sp.repeat(terminalWidth - 4);

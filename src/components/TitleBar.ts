@@ -4,14 +4,24 @@ import {
 } from '../constants/characters';
 import { getTerminalWidth } from '../util';
 
-type titleBarProps = {
+type titleBarParamsType = {
     title: string
 };
 
+/**
+ * @class TitleBar
+ * @description This class is used to create the title bar.
+ */
 export class TitleBar {
-  public static getTitleBar(props: titleBarProps): string {
+  /**
+   * @description This will return the title bar.
+   * @param {titleBarParamsType} params
+   * @memberof TitleBar
+   * @returns {string}
+   */
+  public static getTitleBar(params: titleBarParamsType): string {
     const terminalWidth = getTerminalWidth();
-    const title = props.title.substring(0, 30).padEnd(terminalWidth - 4, sp);
+    const title = params.title.substring(0, 30).padEnd(terminalWidth - 4, sp);
     return `${dv}${sp}${title}${sp}${dv}`;
   }
 }
