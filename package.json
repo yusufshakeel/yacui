@@ -1,6 +1,6 @@
 {
   "name": "yacui",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "This is a Node.js project to create user interface for the console.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
