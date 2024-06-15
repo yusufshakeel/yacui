@@ -96,24 +96,23 @@ export class Modal {
   }
 
   /**
-   * @description Builds the modal and returns the string representation.
+   * @description Builds the modal and returns the lines.
    * @memberof Modal
-   * @returns {string}
+   * @returns {string[]}
    */
-  public build(): string {
+  public build(): string[] {
     const horizontalDivider = lh.repeat(this.modalWidth - 2);
     const horizontalShadow = `${sp}${sh.repeat(this.modalWidth)}`;
+    const bodyDivider = `${lvr}${horizontalDivider}${lvl}${sh}`;
+    const emptyRow = lv + sp.repeat(this.modalWidth - 2) + lv + sh;
 
-    const topBorder = `${dr}${horizontalDivider}${dl}\n`;
+    const topBorder = `${dr}${horizontalDivider}${dl}`;
 
-    const titleRow = `${this.leftBorder}${this.title}${this.rightBorder}${sh}\n` +
-      `${lvr}${horizontalDivider}${lvl}${sh}\n`;
+    const titleRow = `${this.leftBorder}${this.title}${this.rightBorder}${sh}`;
     
     const body = this.bodyLines.map(line => {
       return `${this.leftBorder}${line}${this.rightBorder}${sh}`;
-    }).join('\n');
-
-    const emptyRow = '\n' + lv + sp.repeat(this.modalWidth - 2) + lv + sh + '\n';
+    });
 
     let footerItems = this.yesButton;
     footerItems += this.noButton;
@@ -121,11 +120,20 @@ export class Modal {
     footerItems += this.closeButton;
     footerItems = footerItems.padEnd(this.modalInnerWidth + 1, sp);
 
-    let footer = `${lvr}${horizontalDivider}${lvl}${sh}\n`;
-    footer += `${lv}${sp}${footerItems}${sp}${lv}${sh}\n`;
+    const footer = `${lv}${sp}${footerItems}${sp}${lv}${sh}`;
     
-    const bottomBorder = `${ur}${horizontalDivider}${ul}${sh}\n`;
+    const bottomBorder = `${ur}${horizontalDivider}${ul}${sh}`;
 
-    return `${topBorder}${titleRow}${body}${emptyRow}${footer}${bottomBorder}${horizontalShadow}`;
+    return [
+      topBorder,
+      titleRow,
+      bodyDivider,
+      ...body,
+      emptyRow,
+      bodyDivider,
+      footer,
+      bottomBorder,
+      horizontalShadow
+    ];
   }
 }

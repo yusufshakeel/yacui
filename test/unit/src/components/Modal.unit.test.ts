@@ -11,18 +11,18 @@ describe('Modal', () => {
       .withCloseButton()
       .build();
     expect(modal)
-      .toStrictEqual(
-        '┌─────────────────────────────────┐\n'+
-        '│ My title                        │░\n'+
-        '├─────────────────────────────────┤░\n'+
-        '│ This is a sample body for       │░\n'+
-        '│ testing and it is occupying     │░\n'+
-        '│ multiple lines.                 │░\n'+
-        '│                                 │░\n'+
-        '├─────────────────────────────────┤░\n'+
-        '│ [Y]es [N]o [O]kay [C]lose       │░\n'+
-        '└─────────────────────────────────┘░\n'+
+      .toStrictEqual([
+        '┌─────────────────────────────────┐',
+        '│ My title                        │░',
+        '├─────────────────────────────────┤░',
+        '│ This is a sample body for       │░',
+        '│ testing and it is occupying     │░',
+        '│ multiple lines.                 │░',
+        '│                                 │░',
+        '├─────────────────────────────────┤░',
+        '│ [Y]es [N]o [O]kay [C]lose       │░',
+        '└─────────────────────────────────┘░',
         ' ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░'
-      );
+      ]);
   });
 });
