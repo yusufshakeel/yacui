@@ -104,15 +104,13 @@ export class Modal {
     const horizontalDivider = lh.repeat(this.modalWidth - 2);
     const horizontalShadow = `${sp}${sh.repeat(this.modalWidth)}`;
     const bodyDivider = `${lvr}${horizontalDivider}${lvl}${sh}`;
-    const emptyRow = lv + sp.repeat(this.modalWidth - 2) + lv + sh;
+    const emptyRow = `${lv}${sp.repeat(this.modalWidth - 2)}${lv}${sh}`;
 
     const topBorder = `${dr}${horizontalDivider}${dl}`;
 
     const titleRow = `${this.leftBorder}${this.title}${this.rightBorder}${sh}`;
     
-    const body = this.bodyLines.map(line => {
-      return `${this.leftBorder}${line}${this.rightBorder}${sh}`;
-    });
+    const body = this.bodyLines.map(line => `${this.leftBorder}${line}${this.rightBorder}${sh}`);
 
     let footerItems = this.yesButton;
     footerItems += this.noButton;
