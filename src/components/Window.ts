@@ -72,20 +72,28 @@ export class Window {
   }
 
   /**
-   * @description Builds the window and returns the string representation.
+   * @description Builds the window and returns the lines.
    * @memberof Window
-   * @returns {string}
+   * @returns {string[]}
    */
-  public build(): string {
+  public build(): string[] {
     const horizontalBorder = dh.repeat(this.windowWidth - 2);
-    const horizontalDivider = `${vr}${horizontalBorder}${vl}\n`;
+    const horizontalDivider = `${vr}${horizontalBorder}${vl}`;
 
-    const topBorder = `${dr}${horizontalBorder}${dl}\n`;
-    const title = `${dv}${sp}${this.title.padEnd(this.windowWidth - 4, sp)}${sp}${dv}\n`;
-    const rows = new Array(this.windowHeight - 6).fill(`${dv}${sp.padEnd(this.windowWidth - 2, sp)}${dv}\n`).join('');
-    const footer = `${dv}${sp}${this.footer.padEnd(this.windowWidth - 4, sp)}${sp}${dv}\n`;
+    const topBorder = `${dr}${horizontalBorder}${dl}`;
+    const title = `${dv}${sp}${this.title.padEnd(this.windowWidth - 4, sp)}${sp}${dv}`;
+    const rows = new Array(this.windowHeight - 6).fill(`${dv}${sp.padEnd(this.windowWidth - 2, sp)}${dv}`);
+    const footer = `${dv}${sp}${this.footer.padEnd(this.windowWidth - 4, sp)}${sp}${dv}`;
     const bottomBorder = `${ur}${horizontalBorder}${ul}`;
 
-    return `${topBorder}${title}${horizontalDivider}${rows}${horizontalDivider}${footer}${bottomBorder}`;
+    return [
+      topBorder,
+      title,
+      horizontalDivider,
+      ...rows,
+      horizontalDivider,
+      footer,
+      bottomBorder
+    ];
   }
 }
