@@ -11,7 +11,7 @@ import {
 } from '../constants/characters';
 import { getTerminalHeight, getTerminalWidth } from '../util';
 
-type footerParamsType = {
+type FooterParamsType = {
   items: string[]
 };
 
@@ -62,11 +62,11 @@ export class Window {
 
   /**
    * @description Set the footer of the window.
-   * @param {footerParamsType} params
+   * @param {FooterParamsType} params
    * @memberof Window
    * @returns {Window}
    */
-  public withFooter(params: footerParamsType): Window {
+  public withFooter(params: FooterParamsType): Window {
     this.footer = params.items.join(' ');
     return this;
   }
