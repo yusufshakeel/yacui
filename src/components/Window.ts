@@ -11,7 +11,7 @@ import {
 } from '../constants/characters';
 import { getTerminalHeight, getTerminalWidth } from '../util';
 
-type FooterParamsType = {
+export interface WindowFooter {
   items: string[]
 };
 
@@ -62,12 +62,12 @@ export class Window {
 
   /**
    * @description Set the footer of the window.
-   * @param {FooterParamsType} params
+   * @param {WindowFooter} options
    * @memberof Window
    * @returns {Window}
    */
-  public withFooter(params: FooterParamsType): Window {
-    this.footer = params.items.join(' ');
+  public withFooter(options: WindowFooter): Window {
+    this.footer = options.items.join(' ');
     return this;
   }
 
